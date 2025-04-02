@@ -21,3 +21,8 @@ This pipeline ingests raw data, transforms it into a usable format using a medal
 * **Azure Databricks:** Performs data transformation and processing, moving data from Bronze to Silver to Gold layers.
 * **Azure Synapse Analytics:** Used for querying and analyzing the Gold layer data for reporting.
 * **Visualization (Power BI):** Tool used for creating interactive dashboards and reports.
+
+### Medallion Architecture:
+![image](https://github.com/user-attachments/assets/cb33d04e-c5cf-4bd8-ad6b-f76486da4cea)
+
+
