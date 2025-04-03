@@ -22,7 +22,7 @@ This pipeline ingests raw data, transforms it into a usable format using a medal
     * **Bronze:** Raw data.
     * **Silver:** Cleaned and transformed data.
     * **Gold:** Aggregated and enriched data.
-* I created two ADLS for each each sources
+* I created two ADLS for each each sources.
 
 * **Azure Databricks:** Performs data transformation and processing, moving data from Bronze to Silver to Gold layers.
   
