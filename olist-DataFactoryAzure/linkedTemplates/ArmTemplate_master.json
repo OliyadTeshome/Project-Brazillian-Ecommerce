@@ -1,0 +1,112 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "olist-DataFactoryAzure"
+		},
+		"ADataLake_for_csv_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ADataLake_for_csv'"
+		},
+		"SQL_to_ADLS_linkedservice_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'SQL_to_ADLS_linkedservice'"
+		},
+		"filess_SQL_Database_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'filess_SQL_Database'"
+		},
+		"ADataLake_for_csv_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://oliststorageacc.dfs.core.windows.net/"
+		},
+		"Http_Github_linkedservice_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/OliyadTeshome/"
+		},
+		"Json_from_Github_ForLoop_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/OliyadTeshome/"
+		},
+		"SQL_to_ADLS_linkedservice_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://oliststorageacc.dfs.core.windows.net/"
+		},
+		"filess_SQL_Database_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "rdccb.h.filess.io"
+		},
+		"filess_SQL_Database_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "olistProject_tripslight"
+		},
+		"filess_SQL_Database_properties_typeProperties_username": {
+			"type": "string",
+			"defaultValue": "olistProject_tripslight"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "olist-DataFactoryAzure_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ADataLake_for_csv_accountKey": {
+						"value": "[parameters('ADataLake_for_csv_accountKey')]"
+					},
+					"SQL_to_ADLS_linkedservice_accountKey": {
+						"value": "[parameters('SQL_to_ADLS_linkedservice_accountKey')]"
+					},
+					"filess_SQL_Database_password": {
+						"value": "[parameters('filess_SQL_Database_password')]"
+					},
+					"ADataLake_for_csv_properties_typeProperties_url": {
+						"value": "[parameters('ADataLake_for_csv_properties_typeProperties_url')]"
+					},
+					"Http_Github_linkedservice_properties_typeProperties_url": {
+						"value": "[parameters('Http_Github_linkedservice_properties_typeProperties_url')]"
+					},
+					"Json_from_Github_ForLoop_properties_typeProperties_url": {
+						"value": "[parameters('Json_from_Github_ForLoop_properties_typeProperties_url')]"
+					},
+					"SQL_to_ADLS_linkedservice_properties_typeProperties_url": {
+						"value": "[parameters('SQL_to_ADLS_linkedservice_properties_typeProperties_url')]"
+					},
+					"filess_SQL_Database_properties_typeProperties_server": {
+						"value": "[parameters('filess_SQL_Database_properties_typeProperties_server')]"
+					},
+					"filess_SQL_Database_properties_typeProperties_database": {
+						"value": "[parameters('filess_SQL_Database_properties_typeProperties_database')]"
+					},
+					"filess_SQL_Database_properties_typeProperties_username": {
+						"value": "[parameters('filess_SQL_Database_properties_typeProperties_username')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

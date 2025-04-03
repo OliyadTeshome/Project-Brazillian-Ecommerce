@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "olist-DataFactoryAzure"
+		},
+		"ADataLake_for_csv_accountKey": {
+			"value": ""
+		},
+		"SQL_to_ADLS_linkedservice_accountKey": {
+			"value": ""
+		},
+		"filess_SQL_Database_password": {
+			"value": ""
+		},
+		"ADataLake_for_csv_properties_typeProperties_url": {
+			"value": "https://oliststorageacc.dfs.core.windows.net/"
+		},
+		"Http_Github_linkedservice_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/OliyadTeshome/"
+		},
+		"Json_from_Github_ForLoop_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/OliyadTeshome/"
+		},
+		"SQL_to_ADLS_linkedservice_properties_typeProperties_url": {
+			"value": "https://oliststorageacc.dfs.core.windows.net/"
+		},
+		"filess_SQL_Database_properties_typeProperties_server": {
+			"value": "rdccb.h.filess.io"
+		},
+		"filess_SQL_Database_properties_typeProperties_database": {
+			"value": "olistProject_tripslight"
+		},
+		"filess_SQL_Database_properties_typeProperties_username": {
+			"value": "olistProject_tripslight"
+		}
+	}
+}
