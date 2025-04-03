@@ -16,7 +16,7 @@ This pipeline ingests raw data, transforms it into a usable format using a medal
   
 * **Azure Data Factory:** Orchestrates the ingestion of data from both Data Source to ADLS Gen2.
   
-* Using ADF pipeline I copy each data from Github http to the ADLS I parametrized by creating a <l>ForEachInput.json</l> file
+* Using ADF pipeline I copy each data from Github http to the ADLS I parametrized by creating a ForEachInput.json file.(https://github.com/OliyadTeshome/Project-Brazillian-Ecommerce/blob/main/ForEachInput.json)
   
 * **ADLS Gen2:** Azure Data Lake Storage Gen2, used for storing data at different stages:
     * **Bronze:** Raw data.
