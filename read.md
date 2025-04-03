@@ -9,7 +9,6 @@ This repository contains the code and resources for building an end-to-end data 
 The pipeline consists of the following components:
 
 - **Data Sources:** Data is ingested from various sources, including:
-    - **HTTP/HTTPS:** Data fetched from web APIs or file downloads.
     - **SQL Table:** Data extracted from relational databases.
     - **GitHub:** Data retrieved from GitHub repositories.
 - **Azure Data Factory:** Orchestrates the data ingestion process, moving data from source systems to Azure Data Lake Storage Gen2 (ADLS Gen2).
