@@ -10,15 +10,22 @@ This pipeline ingests raw data, transforms it into a usable format using a medal
 
 ![Architecture](https://github.com/user-attachments/assets/41da69c5-442c-4c2c-b1c8-846ba1325493)
 
-**Explanation of Components**
+**Explanation**
 
-* **Data Source :** Raw Data from Github via http link & SQL_Database via python.
-* **Azure Data Factory:** Orchestrates the ingestion of data from the API to ADLS Gen2.
+* **Data Source :** Raw Data from Github via http linkedservice & MYSQLDB via python.
+  
+* **Azure Data Factory:** Orchestrates the ingestion of data from both Data Source to ADLS Gen2.
+  
+* Using ADF pipeline I copy each data from Github http to the ADLS I parametrized by creating a <l>ForEachInput.json</l> file
+  
 * **ADLS Gen2:** Azure Data Lake Storage Gen2, used for storing data at different stages:
-    * **Bronze (3):** Raw data.
-    * **Silver (2):** Cleaned and transformed data.
-    * **Gold (1):** Aggregated and enriched data.
+    * **Bronze:** Raw data.
+    * **Silver:** Cleaned and transformed data.
+    * **Gold:** Aggregated and enriched data.
+* I created two ADLS for each each sources
+
 * **Azure Databricks:** Performs data transformation and processing, moving data from Bronze to Silver to Gold layers.
+  
 * **Azure Synapse Analytics:** Used for querying and analyzing the Gold layer data for reporting.
 * **Visualization (Power BI):** Tool used for creating interactive dashboards and reports.
 
