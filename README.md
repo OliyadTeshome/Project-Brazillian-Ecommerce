@@ -8,7 +8,7 @@ This pipeline ingests raw data, transforms it into a usable format using a medal
 
 ## Architecture
 
-![Architecture](https://github.com/user-attachments/assets/9f6ede44-cbc1-4285-a384-25dd97783e65)
+![Architecture](https://github.com/user-attachments/assets/41da69c5-442c-4c2c-b1c8-846ba1325493)
 
 **Explanation of Components**
 

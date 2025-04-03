@@ -1,0 +1,9 @@
+{
+	"name": "olist-DataFactoryAzure",
+	"location": "southafricanorth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0cc390bd-64f4-424c-8eb9-c46c564b5e6e",
+		"tenantId": "84c31ca0-ac3b-4eae-ad11-519d80233e6f"
+	}
+}
