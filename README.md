@@ -32,4 +32,3 @@ This pipeline ingests raw data, transforms it into a usable format using a medal
 ### Medallion Architecture:
 ![image](https://github.com/user-attachments/assets/cb33d04e-c5cf-4bd8-ad6b-f76486da4cea)
 
-
