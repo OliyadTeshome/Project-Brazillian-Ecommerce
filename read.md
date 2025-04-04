@@ -33,7 +33,7 @@ The pipeline consists of the following components:
     - **Permission**
 ![Permission](https://github.com/user-attachments/assets/0b4dcef3-a43b-4804-a762-9678cd51a40c)
     - **Writing Back**
-![Writing Back](https://github.com/user-attachments/assets/8f6a5509-d845-4e96-b66d-17ec90a12220)
+![image](https://github.com/user-attachments/assets/fac2dbb2-a22e-4b2d-af4e-239d17ff29db)
 
 5. **Azure Synapse Analytics:** A limitless analytics service that brings together enterprise data warehousing and big data analytics. It's used to query and prepare data for visualization.
 6. **Power BI:** A business analytics service used to create interactive dashboards and reports for data visualization.
